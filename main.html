@@ -4,60 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inception</title>
+    <title>Accessible Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- Heading with ARIA role -->
     <header>
-        <h1>Inception</h1>
+        <h1 role="heading" aria-level="1">Karan Sarda's Portfolio</h1>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#actor" id="nav-actor">Actors</a> |
-        <a href="#quote" id="nav-quote">Quotes</a>
+    <!-- Navigation with ARIA role -->
+    <nav role="navigation" aria-label="Main navigation">
+        <ul role="list">
+            <li role="listitem"><a href="#about">About Me</a></li>
+            <li role="listitem"><a href="#projects">Projects</a></li>
+            <li role="listitem"><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Summary Section -->
-    <details>
-        <summary>Plot Summary</summary>
-        <p>
-            "Inception" is a 2010 science fiction heist film directed by Christopher Nolan. It revolves around Dom Cobb, a thief who enters the dreams of others to steal their secrets. Given a chance to clear his criminal record, Cobb must pull off the ultimate challenge: performing "inception," the act of planting an idea in someone's mind.
-        </p>
-    </details>
+    <!-- Image with ARIA role and alt text -->
+    <section>
+        <img src="profile.jpg" alt="Portrait of Karan Sarda" role="img">
+    </section>
 
-    <!-- Actor Section -->
-    <section id="actor">
-        <h2>Main Actors</h2>
-        <ul>
-            <li>Leonardo DiCaprio as Dom Cobb</li>
-            <li>Joseph Gordon-Levitt as Arthur</li>
-            <li>Elliot Page as Ariadne</li>
-            <li>Tom Hardy as Eames</li>
-            <li>Ken Watanabe as Saito</li>
+    <!-- Brief description -->
+    <section id="about">
+        <h2 role="heading" aria-level="2">About Me</h2>
+        <p>
+            Hello! I'm Karan Sarda, a passionate full-stack developer with experience in frontend and backend technologies. I specialize in React and Node.js and have built numerous projects, including e-commerce and movie streaming platforms.
+        </p>
+    </section>
+
+    <!-- List with ARIA roles -->
+    <section id="projects">
+        <h2 role="heading" aria-level="2">My Projects</h2>
+        <ul role="list">
+            <li role="listitem">Shopify E-commerce Platform – Developed using React, Node.js, and MongoDB</li>
+            <li role="listitem">Cineplex Movie Trailer Streaming – Built with React and API integration</li>
+            <li role="listitem">Portfolio Website – Accessible portfolio following WAI-ARIA guidelines</li>
         </ul>
     </section>
 
-    <!-- Quote Section -->
-    <section id="quote">
-        <h2>Favorite Quote</h2>
-        <blockquote>"You mustn't be afraid to dream a little bigger, darling." – Eames</blockquote>
+    <!-- Contact section -->
+    <section id="contact">
+        <h2 role="heading" aria-level="2">Contact</h2>
+        <p>You can reach me via <a href="mailto:karan.sarda@example.com">email</a>.</p>
     </section>
-
-    <!-- Aside Section -->
-    <aside>
-        <h2>Movie Details</h2>
-        <p><strong>IMDb Rating:</strong> 8.8/10</p>
-        <p><strong>Release Date:</strong> July 16, 2010</p>
-    </aside>
-
-    <!-- Footer -->
-    <footer>
-        <p>Produced by: Christopher Nolan</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
